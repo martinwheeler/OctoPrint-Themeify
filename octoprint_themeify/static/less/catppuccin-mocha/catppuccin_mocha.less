@@ -1,0 +1,513 @@
+@import "variables.less";
+
+.catppuccin_mocha() {
+    body {
+        background-color: @ctpBase;
+        color: @ctpText;
+        font-weight: 400;
+    }
+
+    ::selection {
+        background-color: fade(@ctpOverlay2, 25%);
+        color: @ctpText;
+    }
+
+    a {
+        color: @ctpBlue;
+
+        &:hover,
+        &:focus {
+            color: @ctpLavender;
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    legend,
+    .octoprint-container .tab-content h1 {
+        color: @ctpText;
+    }
+
+    legend,
+    hr {
+        border-color: @ctpSurface0;
+    }
+
+    .muted,
+    .help-block,
+    .help-inline,
+    .nav-header {
+        color: @ctpSubtext0;
+    }
+
+    .text-info { color: @ctpSapphire; }
+    .text-success { color: @ctpGreen; }
+    .text-warning { color: @ctpYellow; }
+    .text-error { color: @ctpRed; }
+
+    #navbar .navbar-inner {
+        background-color: @ctpCrust;
+        background-image: none;
+        border: 0;
+        box-shadow: none;
+
+        .brand,
+        .nav > li > a {
+            color: @ctpText;
+            text-shadow: none;
+
+            .caret {
+                border-top-color: @ctpText;
+                border-bottom-color: @ctpText;
+            }
+
+            &:hover,
+            &:focus {
+                color: @ctpText;
+                background-color: @ctpSurface0;
+            }
+        }
+
+        .nav > li.dropdown.open > .dropdown-toggle,
+        .nav > li.dropdown.active > .dropdown-toggle,
+        .nav > li.dropdown.open.active > .dropdown-toggle {
+            color: @ctpText;
+            background-color: @ctpSurface0;
+        }
+    }
+
+    .nav-tabs {
+        border-bottom-color: @ctpSurface0;
+
+        > li > a {
+            color: @ctpSubtext1;
+            border-color: transparent;
+            text-shadow: none;
+
+            &:hover,
+            &:focus {
+                color: @ctpText;
+                background-color: @ctpSurface0;
+                border-color: @ctpSurface0;
+            }
+        }
+
+        > .active > a,
+        > .active > a:hover,
+        > .active > a:focus {
+            color: @ctpText;
+            background-color: @ctpSurface0;
+            border-color: @ctpSurface0;
+        }
+    }
+
+    .nav-pills > .active > a,
+    .nav-pills > .active > a:hover,
+    .nav-pills > .active > a:focus {
+        color: @ctpBase;
+        background-color: @ctpBlue;
+    }
+
+    .nav-list {
+        > li > a {
+            color: @ctpSubtext1;
+            text-shadow: none;
+
+            &:hover,
+            &:focus {
+                color: @ctpText;
+                background-color: @ctpSurface0;
+            }
+        }
+
+        > .active > a,
+        > .active > a:hover,
+        > .active > a:focus {
+            color: @ctpBase;
+            background-color: @ctpBlue;
+            text-shadow: none;
+        }
+    }
+
+    .accordion {
+        background-color: @ctpMantle;
+    }
+
+    .accordion-group {
+        border-color: @ctpSurface0;
+    }
+
+    .accordion-heading {
+        background-color: @ctpSurface0;
+
+        .accordion-toggle,
+        [class^="fa-"],
+        [class*=" fa-"],
+        .accordion-heading-button a {
+            color: @ctpText;
+            text-decoration: none;
+        }
+    }
+
+    .accordion-inner {
+        border-top-color: @ctpSurface0;
+    }
+
+    .btn {
+        color: @ctpText;
+        background-color: @ctpSurface0;
+        background-image: none;
+        border-color: @ctpSurface1;
+        box-shadow: none;
+        text-shadow: none;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            color: @ctpText;
+            background-color: @ctpSurface1;
+            border-color: @ctpSurface2;
+        }
+
+        .caret {
+            border-top-color: @ctpText;
+            border-bottom-color: @ctpText;
+        }
+    }
+
+    .btn-group.open .btn.dropdown-toggle {
+        color: @ctpText;
+        background-color: @ctpSurface1;
+        border-color: @ctpSurface2;
+    }
+
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active {
+        color: @ctpBase;
+        background-color: @ctpBlue;
+        border-color: @ctpBlue;
+    }
+
+    .btn-success,
+    .btn-success:hover,
+    .btn-success:focus,
+    .btn-success:active {
+        color: @ctpBase;
+        background-color: @ctpGreen;
+        border-color: @ctpGreen;
+    }
+
+    .btn-warning,
+    .btn-warning:hover,
+    .btn-warning:focus,
+    .btn-warning:active {
+        color: @ctpBase;
+        background-color: @ctpYellow;
+        border-color: @ctpYellow;
+    }
+
+    .btn-danger,
+    .btn-danger:hover,
+    .btn-danger:focus,
+    .btn-danger:active,
+    #job_cancel,
+    #job_cancel:hover,
+    #job_cancel:focus,
+    #job_cancel:active {
+        color: @ctpBase;
+        background-color: @ctpRed;
+        background-image: none;
+        border-color: @ctpRed;
+    }
+
+    .btn-info,
+    .btn-info:hover,
+    .btn-info:focus,
+    .btn-info:active {
+        color: @ctpBase;
+        background-color: @ctpSapphire;
+        border-color: @ctpSapphire;
+    }
+
+    .btn-inverse,
+    .btn-inverse:hover,
+    .btn-inverse:focus,
+    .btn-inverse:active {
+        color: @ctpBase;
+        background-color: @ctpMauve;
+        border-color: @ctpMauve;
+    }
+
+    .btn.disabled,
+    .btn[disabled],
+    input[disabled],
+    select[disabled],
+    textarea[disabled],
+    input[readonly],
+    select[readonly],
+    textarea[readonly] {
+        color: @ctpOverlay1;
+        background-color: @ctpMantle;
+        border-color: @ctpSurface0;
+        opacity: 1;
+    }
+
+    select,
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    .uneditable-input {
+        color: @ctpText;
+        background-color: @ctpSurface0;
+        border-color: @ctpSurface1;
+        box-shadow: none;
+
+        &:focus {
+            border-color: @ctpBlue;
+            box-shadow: 0 0 0 1px @ctpBlue;
+        }
+    }
+
+    input,
+    textarea,
+    select {
+        accent-color: @ctpBlue;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: @ctpOverlay1;
+    }
+
+    .input-append .add-on,
+    .input-prepend .add-on,
+    .input-prepend .add-on.add-on-limited {
+        color: @ctpSubtext1;
+        background-color: @ctpSurface1;
+        background-image: none;
+        border-color: @ctpSurface1;
+        text-shadow: none;
+    }
+
+    .dropdown-menu {
+        color: @ctpText;
+        background-color: @ctpMantle;
+        border-color: @ctpSurface0;
+        box-shadow: 0 5px 15px fade(@ctpCrust, 50%);
+
+        li > a {
+            color: @ctpText;
+
+            &:hover,
+            &:focus {
+                color: @ctpText;
+                background-color: @ctpSurface0;
+                background-image: none;
+            }
+        }
+
+        .active > a,
+        .active > a:hover,
+        .active > a:focus {
+            color: @ctpBase;
+            background-color: @ctpBlue;
+            background-image: none;
+        }
+
+        .divider {
+            background-color: @ctpSurface0;
+            border-bottom-color: @ctpSurface1;
+        }
+    }
+
+    .table th,
+    .table td,
+    .table-bordered,
+    .table-bordered th,
+    .table-bordered td {
+        border-color: @ctpSurface0;
+    }
+
+    .table-striped tbody > tr:nth-child(odd) > td,
+    .table-striped tbody > tr:nth-child(odd) > th {
+        background-color: @ctpMantle;
+    }
+
+    #files .gcode_files .entry:hover,
+    .table-hover tbody tr:hover td,
+    .table-hover tbody tr:hover th {
+        background-color: @ctpSurface0;
+    }
+
+    .modal,
+    .hero-unit {
+        color: @ctpText;
+        background-color: @ctpBase;
+        border-color: @ctpSurface0;
+    }
+
+    .modal-header,
+    .modal-footer {
+        color: @ctpText;
+        background-color: @ctpMantle;
+        border-color: @ctpSurface0;
+        box-shadow: none;
+    }
+
+    .modal-backdrop,
+    .modal-backdrop.fade.in,
+    #offline_overlay_background,
+    #reloadui_overlay_background {
+        background-color: @ctpCrust;
+    }
+
+    .close,
+    .close:hover,
+    .close:focus {
+        color: @ctpRed;
+        text-shadow: none;
+        opacity: 1;
+    }
+
+    .alert {
+        color: @ctpText;
+        background-color: @ctpSurface0;
+        border-color: @ctpOverlay0;
+        text-shadow: none;
+
+        h1, h2, h3, h4, h5, h6 {
+            color: inherit;
+        }
+    }
+
+    .alert-success { border-left: 4px solid @ctpGreen; }
+    .alert-info { border-left: 4px solid @ctpSapphire; }
+    .alert-warning { border-left: 4px solid @ctpYellow; }
+    .alert-error,
+    .alert-danger { border-left: 4px solid @ctpRed; }
+
+    .progress {
+        background-color: @ctpSurface0;
+        background-image: none;
+        box-shadow: none;
+
+        .bar {
+            color: @ctpBase;
+            background-color: @ctpBlue;
+            background-image: none;
+            box-shadow: none;
+            text-shadow: none;
+        }
+
+        .bar-success { background-color: @ctpGreen; }
+        .bar-warning { background-color: @ctpYellow; }
+        .bar-danger { background-color: @ctpRed; }
+    }
+
+    .slider .slider-selection {
+        background: @ctpBlue;
+    }
+
+    .pagination ul {
+        box-shadow: none;
+
+        > li > a,
+        > li > span {
+            color: @ctpText;
+            background-color: @ctpSurface0;
+            border-color: @ctpSurface1;
+
+            &:hover,
+            &:focus {
+                color: @ctpText;
+                background-color: @ctpSurface1;
+            }
+        }
+
+        > .active > a,
+        > .active > span {
+            color: @ctpBase;
+            background-color: @ctpBlue;
+        }
+    }
+
+    .label,
+    .badge {
+        color: @ctpBase;
+        background-color: @ctpBlue;
+        text-shadow: none;
+    }
+
+    .label-success,
+    .badge-success { background-color: @ctpGreen; }
+    .label-warning,
+    .badge-warning { background-color: @ctpYellow; }
+    .label-important,
+    .badge-important { background-color: @ctpRed; }
+    .label-info,
+    .badge-info { background-color: @ctpSapphire; }
+    .label-inverse,
+    .badge-inverse { background-color: @ctpMauve; }
+
+    code,
+    pre,
+    #terminal-output {
+        color: @ctpText;
+        background-color: @ctpMantle;
+        border-color: @ctpSurface0;
+    }
+
+    #terminal-output {
+        color: @ctpGreen;
+    }
+
+    .legend > table,
+    .flot-text {
+        color: @ctpText !important;
+    }
+
+    .icon-sd-black-14,
+    #settings_api canvas {
+        filter: invert(91%);
+    }
+
+    #settings_plugin_pluginmanager_workingdialog_output {
+        .call { color: @ctpBlue; }
+        .stdout { color: @ctpText; }
+        .stderr { color: @ctpRed; }
+    }
+
+    .scrollable::-webkit-scrollbar,
+    .pre-scrollable::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        background-color: @ctpMantle;
+    }
+
+    .scrollable::-webkit-scrollbar-thumb,
+    .pre-scrollable::-webkit-scrollbar-thumb,
+    body::-webkit-scrollbar-thumb {
+        background-color: @ctpSurface2;
+        border-radius: 8px;
+    }
+
+    .scrollable::-webkit-scrollbar-track,
+    .pre-scrollable::-webkit-scrollbar-track,
+    body::-webkit-scrollbar-track {
+        background-color: @ctpMantle;
+    }
+}
