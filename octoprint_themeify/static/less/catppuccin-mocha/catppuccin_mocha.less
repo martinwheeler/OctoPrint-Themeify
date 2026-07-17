@@ -53,6 +53,7 @@
         .brand,
         .nav > li > a {
             color: @ctpText;
+            background-image: none;
             text-shadow: none;
 
             .caret {
@@ -63,7 +64,7 @@
             &:hover,
             &:focus {
                 color: @ctpText;
-                background-color: @ctpSurface0;
+                background: @ctpSurface0 !important;
             }
         }
 
@@ -71,7 +72,7 @@
         .nav > li.dropdown.active > .dropdown-toggle,
         .nav > li.dropdown.open.active > .dropdown-toggle {
             color: @ctpText;
-            background-color: @ctpSurface0;
+            background: @ctpSurface0 !important;
         }
     }
 
@@ -86,7 +87,7 @@
             &:hover,
             &:focus {
                 color: @ctpText;
-                background-color: @ctpSurface0;
+                background: @ctpSurface0;
                 border-color: @ctpSurface0;
             }
         }
@@ -95,8 +96,20 @@
         > .active > a:hover,
         > .active > a:focus {
             color: @ctpText;
-            background-color: @ctpSurface0;
+            background: @ctpSurface0;
             border-color: @ctpSurface0;
+        }
+    }
+
+    .nav-pills > li > a {
+        color: @ctpSubtext1;
+        background-image: none;
+        text-shadow: none;
+
+        &:hover,
+        &:focus {
+            color: @ctpText;
+            background: @ctpSurface0;
         }
     }
 
@@ -104,7 +117,7 @@
     .nav-pills > .active > a:hover,
     .nav-pills > .active > a:focus {
         color: @ctpBase;
-        background-color: @ctpBlue;
+        background: @ctpBlue;
     }
 
     .nav-list {
